@@ -1,6 +1,5 @@
-DROP PROCEDURE IF EXISTS get_warehouse_product_inventory;
-
 USE ShopDB;
+DROP PROCEDURE IF EXISTS get_warehouse_product_inventory;
 
 DELIMITER //
 CREATE PROCEDURE get_warehouse_product_inventory(
