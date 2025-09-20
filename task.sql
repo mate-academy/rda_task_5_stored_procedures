@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS ShopDB;
+USE ShopDB;
 
 DELIMITER //
 	CREATE PROCEDURE get_warehouse_product_inventory(
