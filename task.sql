@@ -7,7 +7,7 @@ CREATE PROCEDURE get_warehouse_product_inventory (
 )
 BEGIN
     SELECT
-        p.ProductName AS Product,
+        p.Name AS Product,
         pi.WarehouseAmount AS Amount
     FROM ProductInventory pi
     INNER JOIN Products p ON pi.ProductID = p.ID
