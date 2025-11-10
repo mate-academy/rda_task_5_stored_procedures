@@ -1,4 +1,6 @@
-USE ShopDB; 
+DROP DATABASE ShopDB;
+
+USE ShopDB;
 
 DELIMITER //
 
