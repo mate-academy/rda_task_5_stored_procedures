@@ -1,3 +1,4 @@
+--start
 CREATE DATABASE IF NOT EXISTS ShopDB;
 USE ShopDB;
 
