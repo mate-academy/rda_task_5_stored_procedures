@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS ShopDB;
+
 USE ShopDB;
 
 -- Create your stored procedure here
