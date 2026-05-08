@@ -1,4 +1,6 @@
-USE ShopDB; 
+DROP DATABASE ShopDB;
+
+USE ShopDB;
 
 DELIMITER //
 CREATE PROCEDURE get_warehouse_product_inventory (IN WarehouseID INT)
