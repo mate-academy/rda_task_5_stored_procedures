@@ -10,6 +10,6 @@ BEGIN
     FROM ShopDB.Products
     JOIN ShopDB.ProductInventory
     ON ShopDB.Products.ID = ShopDB.ProductInventory.ProductID
-    WHERE ShopDB.Products.ID = ID;
+    WHERE ShopDB.ProductInventory.ID = ID;
 END //
 DELIMITER ;
