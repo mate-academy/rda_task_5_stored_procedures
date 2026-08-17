@@ -20,8 +20,19 @@ jobs:
     - name: Spin-up the database for tests
       run: docker run --name mysql -e MYSQL_ROOT_PASSWORD=P@ssw0rd -v $(pwd):/scripts -d mysql:8.0-debian
 
-    - name: Wait for the database service to start 
-      run: sleep 15 
+    - name: Wait for the database service to start
+      run: |
+        for i in {1..30}; do
+          if docker exec mysql mysql -u root -pP@ssw0rd -e "SELECT 1" > /dev/null 2>&1; then
+            echo "MySQL is ready"
+            exit 0
+          fi
+          echo "Attempt $i/30: Waiting for MySQL..."
+          sleep 1
+        done
+        echo "MySQL failed to start. Container logs:"
+        docker logs mysql
+        exit 1
 
     - name: Run database creation code
       run: docker exec mysql sh -c 'mysql -u root -pP@ssw0rd < /scripts/create-database.sql'
