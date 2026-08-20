@@ -1,7 +1,7 @@
-USE ShopDB; 
-
+USE ShopDB;
+DELIMITER //
 CREATE PROCEDURE get_warehouse_product_inventory(
-    IN WarehouseId INT
+    IN warehouse_id INT
 )
 BEGIN
     SELECT 
@@ -12,5 +12,6 @@ BEGIN
         ON pinv.WarehouseID = w.ID
     JOIN Products AS pr
         ON pr.ID = pinv.ProductID
-    WHERE w.ID = WarehouseID
-END
+    WHERE w.ID = warehouse_id;
+END //
+DELIMITER ;
