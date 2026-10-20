@@ -10,6 +10,6 @@ BEGIN
     FROM Products
     JOIN ProductInventory
     ON Products.ID = ProductInventory.ProductID
-    WHERE Products.ID=IdFilters;
+    WHERE ProductInventory.WarehouseID=IdFilters;
 END //
 DELIMITER ;
