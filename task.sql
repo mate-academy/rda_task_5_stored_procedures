@@ -1,3 +1,6 @@
+-- the requirements DO NOT state that DROP DATABASE ShopDB; should be included in task.sql!!!
+-- DROP DATABASE ShopDB;
+
 USE ShopDB; 
 
 -- Create your stored procedure here
