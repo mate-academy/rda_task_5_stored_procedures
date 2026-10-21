@@ -1,5 +1,4 @@
--- the requirements DO NOT state that DROP DATABASE ShopDB; should be included in task.sql!!!
--- DROP DATABASE ShopDB;
+DROP DATABASE IF EXISTS ShopDB;
 
 USE ShopDB; 
 
